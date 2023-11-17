@@ -3,8 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - wget https://dev.mysql.com/get/mysql80-community-release-el7-11.noarch.rpm
-      - yum localinstall -y mysql80-community-release-el7-11.noarch.rpm
+      - sudo yum install -y mariadb mariadb-client
       - mysql --version
   pre_build:
     commands:
