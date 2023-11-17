@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - sudo yum install -y mariadb mariadb-client
+      - yum install -y mariadb mariadb-client
       - mysql --version
   pre_build:
     commands:
