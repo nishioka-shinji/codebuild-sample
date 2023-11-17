@@ -5,7 +5,7 @@ phases:
     commands:
       - wget https://dev.mysql.com/get/mysql80-community-release-el7-11.noarch.rpm
       - yum localinstall -y mysql80-community-release-el7-11.noarch.rpm
-      - yum install -y mysql-community-client
+      - mysql --version
   pre_build:
     commands:
       - echo 'Hello World (PRE_BUILD phase)'
