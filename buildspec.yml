@@ -3,7 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo 'Hello World (INSTALL phase)'
+      - rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+      - rpm -Uvh https://dev.mysql.com/get/mysql80-community-release-el7-11.noarch.rpm
+      - yum install -y mysql-community-client
   pre_build:
     commands:
       - echo 'Hello World (PRE_BUILD phase)'
